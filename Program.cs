@@ -11,15 +11,15 @@ namespace Tries
 
             Trie trie = new Trie();
 
-            for (int a0 = 0; a0 < n; a0++)
+            for (int commandCount = 0; commandCount < n; commandCount++)
             {
                 string[] tokens_op = Console.ReadLine().Split(' ');
-                string op = tokens_op[0];
+                string operation = tokens_op[0];
                 string contact = tokens_op[1];
-                if (op.Equals("add")){
+                if (operation.Equals("add")){
                     trie.Add(contact);
                 }
-                else if (op.Equals("find"))
+                else if (operation.Equals("find"))
                 {
                     var count = trie.Count(contact);
                     Console.WriteLine(count);
